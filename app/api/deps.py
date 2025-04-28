@@ -29,7 +29,6 @@ async def get_current_user(
         email: str | None = payload.get("sub")
         if email is None:
             raise credentials_exception
-        print(email, len(email), email.index("t"), email.index("}"))
         email = email[9:(len(email)-2)]
         print(email)
         token_data = schemas.TokenData(email=email)
