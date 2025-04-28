@@ -5,9 +5,12 @@ from app.core.config import settings
 from app.core.database import engine, Base
 from app.api.v1.api import api_router
 
+
 # Create database tables if they don't exist (for development/simple setups)
 # For production, prefer using Alembic migrations
 # Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
+
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
