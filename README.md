@@ -23,22 +23,6 @@ This directory contains the FastAPI backend for the GroceryWise application.
     - **Generate a `SECRET_KEY`:** Run `openssl rand -hex 32` in your terminal and paste the output into the `.env` file for the `SECRET_KEY` variable. This is crucial for security.
     - Review other variables in `.env` (like `DATABASE_URL` if you want to use a different database name or location).
 
-4.  **Database Migrations:**
-    - Initialize the database using Alembic:
-      ```bash
-      alembic upgrade head
-      ```
-    - This command reads the models defined in `app/models/models.py` and creates the corresponding tables in the SQLite database specified by `DATABASE_URL` in your `.env` file (default: `sql_app.db`).
-    - If you make changes to your SQLAlchemy models in the future, you'll need to generate a new migration:
-      ```bash
-      alembic revision --autogenerate -m "Describe your changes here"
-      ```
-    - Then apply the migration:
-      ```bash
-      alembic upgrade head
-      ```
-
-## Running the Backend
 
 1.  **Start the FastAPI server:**
     ```bash
