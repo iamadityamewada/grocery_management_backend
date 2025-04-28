@@ -11,7 +11,7 @@ class Settings(BaseSettings):
 
     # Database
     # DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./sql_app.db")
-    DATABASE_URL = os.getenv("DATABASE_URL")
+    DATABASE_URL: str = os.getenv("DATABASE_URL")
 
     # JWT settings
     SECRET_KEY: str = os.getenv("SECRET_KEY", "a_default_secret_key") # Provide a default or ensure it's in .env
