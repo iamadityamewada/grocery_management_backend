@@ -1,0 +1,9 @@
+fastapi[all]
+uvicorn[standard]
+sqlalchemy
+alembic
+python-dotenv
+passlib[bcrypt]
+python-jose[cryptography]
+# Required by SQLAlchemy for SQLite
+pysqlite3-binary # Or remove this line if using system's sqlite3
