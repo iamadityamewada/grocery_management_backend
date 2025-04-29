@@ -29,10 +29,10 @@ class GroceryItem(GroceryItemBase):
 
 # User Schemas
 class UserBase(BaseModel):
-    email: EmailStr = Field(..., examples=["user@example.com"])
+    email: EmailStr = Field(..., examples=["test@user.com"])
 
 class UserCreate(UserBase):
-    password: str = Field(..., min_length=8, examples=["SecurePassword123"])
+    password: str = Field(..., min_length=8, examples=["12345678"])
 
 class UserUpdate(BaseModel):
     # Currently only supporting password update via separate endpoint
