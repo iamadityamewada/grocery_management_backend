@@ -20,10 +20,7 @@ app = FastAPI(
 # Set all CORS enabled origins
 # In production, restrict this to your frontend's domain
 
-origins = [
-    "*"
-    # or ["https://your-frontend-domain.com"] for more security
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
